@@ -29,6 +29,9 @@ class Top
         Top returnObjectForRef(Top & top) {
             return top;
         }
+        Top & returnObjectForReference() {
+            return *this;
+        }
         void print() {
             cout << "name = " << name << endl;
         }
@@ -54,6 +57,11 @@ int main() {
     top2 = top2.returnObject(top1);
     top2.print();
     cout << endl << endl;
+
+    Top top5;
+    top5 = top5.returnObjectForReference();
+    top5.print();
+
 
 
 
